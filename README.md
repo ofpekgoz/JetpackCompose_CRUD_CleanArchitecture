@@ -2,8 +2,9 @@
 
 -JetpackCompose
 - MVVM 
-- Room 
--Dagger Hilt 
--Coroutines 
--Use Case 
--Ui State/Ui Event 
+- Room
+- Dagger Hilt
+- Coroutines
+- Use Case 
+- Ui State/Ui Event 
+
