@@ -1,6 +1,6 @@
 # JetpackCompose_CRUD_CleanArchitecture
 
--JetpackCompose
+- JetpackCompose
 - MVVM 
 - Room
 - Dagger Hilt
