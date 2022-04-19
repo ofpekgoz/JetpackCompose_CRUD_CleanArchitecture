@@ -10,9 +10,6 @@ import com.omerfpekgoz.jetpackcompose_crud_cleanarchitecture.feature_users.domai
     version = 1,
     exportSchema = false
 )
-abstract class UserDatabase:RoomDatabase() {
-
-    abstract val userDao:UserDao
-
-
+abstract class UserDatabase : RoomDatabase() {
+    abstract val userDao: UserDao
 }

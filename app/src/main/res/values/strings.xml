@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">JetpackCompose_CRUD_CleanArchitecture</string>
+    <string name="users">Users</string>
+    <string name="add_user">Add User</string>
+    <string name="name">Name</string>
+    <string name="lastName">Lastname</string>
+    <string name="age">Age</string>
 </resources>

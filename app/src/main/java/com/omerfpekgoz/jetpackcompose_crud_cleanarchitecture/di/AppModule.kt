@@ -24,6 +24,7 @@ object AppModule {
         DATABASE_NAME
     ).build()
 
+
     @Provides
     @Singleton
     fun provideRepository(db: UserDatabase): UserRepository {

@@ -18,29 +18,26 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     private val deleteUserUseCase: DeleteUserUseCase,
     getUsersUseCase: GetUsersUseCase
-):ViewModel() {
+) : ViewModel() {
 
-    private val _state= mutableStateOf(HomeState())
-     val state:State<HomeState> =_state
+    private val _state = mutableStateOf(HomeState())
+    val state: State<HomeState> = _state
 
     init {
-        getUsersUseCase().onEach {users->
-            _state.value=state.value.copy(
+        getUsersUseCase().onEach { users ->
+            _state.value = state.value.copy(
                 users = users
             )
         }.launchIn(viewModelScope)
     }
 
-    fun onEvent(event: HomeEvent){
-        when(event){
-            is HomeEvent.DeleteUser->{
+    fun onEvent(event: HomeEvent) {
+        when (event) {
+            is HomeEvent.DeleteUser -> {
                 viewModelScope.launch {
                     deleteUserUseCase(event.user)
                 }
             }
         }
     }
-
-
-
 }
